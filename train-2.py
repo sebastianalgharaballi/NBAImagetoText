@@ -24,7 +24,7 @@ def train():
     vocab_size = len(dataset.vocab)
     num_layers = 1
     learning_rate = 0.0003
-    num_epochs = 125
+    num_epochs = 100
 
     writer = SummaryWriter('runs/NBA')
     step = 0
