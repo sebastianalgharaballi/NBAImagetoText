@@ -15,9 +15,9 @@ def train():
 
     torch.backends.cuda.benchmark = True
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    load_model = False
-    save_model = False
-    train_CNN = True
+    load_model = False # set to True when loading saved model
+    save_model = False # set to True when saving trained model
+    train_CNN = False # set to True when training model
     #hyperparameters
     embed_size = 1000
     hidden_size = 1000
