@@ -2,7 +2,8 @@ import torch
 import torchvision.transforms as transforms
 from PIL import Image
 
-# This is a utilities file mainly used to clearly see the names our model is predicting versus the correct names of the test examples through my first function. I also wrote two functions that can be used to save a checkpoint of our current trained model and load that same checkpoint for further training or evaluation.
+# This is a utilities file mainly used to clearly see the names our model is predicting versus the correct names of the test examples through my first function. 
+# I also wrote two functions that can be used to save a checkpoint of our current trained model and load that same checkpoint for further training or evaluation.
 
 def print_examples(model, device, dataset):
     transform = transforms.Compose(
@@ -109,12 +110,12 @@ def print_examples(model, device, dataset):
 
 
 def save_checkpoint(state, filename="my_checkpoint.pth.tar"):
-    print("=> Saving checkpoint")
+    print("Checkpoint saved")
     torch.save(state, filename)
 
 
 def load_checkpoint(checkpoint, model, optimizer):
-    print("=> Loading checkpoint")
+    print("Loading checkpoint...")
     model.load_state_dict(checkpoint["state_dict"])
     optimizer.load_state_dict(checkpoint["optimizer"])
     step = checkpoint["step"]
