@@ -56,7 +56,9 @@ def train():
             captions = captions.to(device)
             outputs = model(imgs, captions[:-1])
             loss = criterion(outputs.reshape(-1, outputs.shape[2]), captions.reshape(-1))
-
+            
+            writer.add_scalar('Loss', loss.item(), global_step=step)
+         
             step += 1
 
             optimizer.zero_grad()
