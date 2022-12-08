@@ -26,7 +26,7 @@ def train():
     learning_rate = 0.0003
     num_epochs = 100
 
-    writer = SummaryWriter('runs/NBA')
+    writer = SummaryWriter('final_loss')
     step = 0
 
     model = CNNtoRNN(embed_size, hidden_size, vocab_size, num_layers).to(device)
