@@ -1,4 +1,4 @@
-# This is a file that functions as a vocabulary builder for the project. It tokenizes the captions from my captions text file, and vectorizes the respesctive
+# This is a file that functions as a vocabulary loader for the project. It tokenizes the captions from my captions text file, and vectorizes the respesctive
 # tokens into batches to prepare for the training process.
 import os
 import pandas as pd
